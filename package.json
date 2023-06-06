@@ -16,13 +16,6 @@
   ],
   "author": "hugotomazi",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hugotomazi/navigation-bar.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hugotomazi/navigation-bar/issues"
-  },
   "keywords": [
     "capacitor",
     "plugin",
@@ -44,9 +37,10 @@
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm run build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@capacitor/android": "^5.0.0",
     "@capacitor/core": "^5.0.0",
     "@capacitor/docgen": "^0.2.0",
